@@ -8,7 +8,8 @@
 		"build": "tsc && vite build",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
-		"comp": "generate-react component"
+		"comp": "generate-react component",
+		"page": "generate-react component --type=page"
 	},
 	"dependencies": {
 		"@redux-devtools/extension": "^3.2.5",
