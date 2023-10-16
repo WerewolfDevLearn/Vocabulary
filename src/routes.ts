@@ -1,6 +1,4 @@
 export default {
-	home: "/",
-	register: "/register",
-	login: "/login",
-	contacts: "/contacts",
+	auth: "/",
+	userPage: "/userpage",
 };

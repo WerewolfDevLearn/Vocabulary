@@ -1,10 +1,12 @@
-import { ButtonStyles } from "./Button.styled";
+import { ButtonStyles, BtnSecondBg } from "./Button.styled";
+import { ButtonTypes } from "./ButtonTypes";
 
-export default function Button({ arg }: any) {
+export default function Button({ name }: ButtonTypes) {
 	return (
-		<ButtonStyles>
-			<h2>Button</h2>
-			<p>{arg}</p>
-		</ButtonStyles>
+		<>
+			<ButtonStyles className='header-btn'>
+				<BtnSecondBg className='btn-second-bg'>{name}</BtnSecondBg>
+			</ButtonStyles>
+		</>
 	);
 }

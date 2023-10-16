@@ -58,5 +58,13 @@ module.exports = {
 				singleQuote: true,
 			},
 		],
+		"import/order": [
+			"error",
+			{
+				groups: ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
+				"newlines-between": "always-and-inside-groups",
+			},
+		],
+		"multiline-ternary": "off",
 	},
 };
