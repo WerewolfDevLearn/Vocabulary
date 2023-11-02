@@ -5,7 +5,7 @@ export const SwitchButtonStyles = styled.button`
 	padding: 4px 8px;
 	margin: 0 auto;
 	background-color: transparent;
-	border: 4px solid transparent;
+	border: 2px solid transparent;
 	border-radius: 5px;
 	font-size: var(--font-size-small);
 	transition:
@@ -13,7 +13,7 @@ export const SwitchButtonStyles = styled.button`
 		background-color 250ms;
 	&:hover,
 	&:focus {
-		border-width: 4px;
+		border-width: 2px;
 		border-color: var(--accent-color);
 		border-radius: 5px;
 		background-color: var(--transperent-bg);

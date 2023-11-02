@@ -4,6 +4,6 @@ export interface IForm {
 
 export interface IFormInput {
 	name?: string;
-	"e-mail": string;
+	email: string;
 	password: string;
 }

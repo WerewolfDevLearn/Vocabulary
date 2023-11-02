@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { AuthPagePageStyles } from "./AuthPage.styled";
+import { AuthPageState } from "./AuthPageTypes";
 
 import Form from "components/Form";
 import SwitchButton from "components/SwitchButton";
 
 export default function AuthPage() {
-	const [formName, setFormName] = useState<string>("Register");
+	const [formName, setFormName] = useState<AuthPageState>("Register");
 
-	const switchName = (text: string) => setFormName(text);
+	const switchName = (text: AuthPageState) => setFormName(text);
 	return (
 		<AuthPagePageStyles>
 			<Form formName={formName} />

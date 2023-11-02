@@ -1,26 +1,23 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { register, userlogin, logOut } from '../authOps';
+import { createSlice } from "@reduxjs/toolkit";
+import { userAuth, userLogOut } from "../authOps";
 
 const initialState = false;
 
 const isLoadingSlice = createSlice({
-  name: 'isLoading',
-  initialState: initialState,
-  reducers: {},
-  extraReducers: (builder) => {
-    builder
-      .addCase(register.pending, () => true)
-      .addCase(userlogin.pending, () => true)
-      .addCase(logOut.pending, () => true)
+	name: "isLoading",
+	initialState: initialState,
+	reducers: {},
+	extraReducers: builder => {
+		builder
+			.addCase(userAuth.pending, () => true)
+			.addCase(userLogOut.pending, () => true)
 
-      .addCase(register.fulfilled, () => false)
-      .addCase(userlogin.fulfilled, () => false)
-      .addCase(logOut.fulfilled, () => false)
+			.addCase(userAuth.fulfilled, () => false)
+			.addCase(userLogOut.fulfilled, () => false)
 
-      .addCase(register.rejected, () => false)
-      .addCase(userlogin.rejected, () => false)
-      .addCase(logOut.rejected, () => false);
-  },
+			.addCase(userAuth.rejected, () => false)
+			.addCase(userLogOut.rejected, () => false);
+	},
 });
 
 export const isLoadingReducer = isLoadingSlice.reducer;

@@ -1,11 +1,9 @@
-import usePHBState from "../../redux/selectors";
 import { Outlet, Navigate } from "react-router-dom";
 import routes from "../../routes";
+import { useToken } from "../../redux/selectors";
 
 export default function PrivateRoutes() {
-	const {
-		user: { profile },
-	} = usePHBState();
+	const token = useToken();
 
-	return profile.name ? <Outlet /> : <Navigate to={routes.login} />;
+	return token ? <Outlet /> : <Navigate to={routes.auth} />;
 }

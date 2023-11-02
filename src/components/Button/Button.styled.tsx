@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
-export const ButtonStyles = styled.button`
+export const ButtonStyles = styled(NavLink)`
+	width: fit-content;
 	display: block;
 	background-color: var(--full-transperent-bg);
 	padding: 8px;
@@ -16,6 +18,9 @@ export const ButtonStyles = styled.button`
 	}
 	&:hover span {
 		background-color: var(--maine-alt-bg-color);
+	}
+	&.active {
+		border-color: var(--accent-color);
 	}
 `;
 export const BtnSecondBg = styled.span`

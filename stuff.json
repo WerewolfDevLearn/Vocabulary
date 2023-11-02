@@ -1,0 +1,50 @@
+{
+	"type": "user/Auth/fulfilled",
+	"payload": {
+		"user": {
+			"uid": "FZTTEbBf9hMK62HJlg4kKR4qpYG2",
+			"email": "werewolfmda@gmail.com",
+			"emailVerified": false,
+			"isAnonymous": false,
+			"providerData": [
+				{
+					"providerId": "password",
+					"uid": "werewolfmda@gmail.com",
+					"displayName": null,
+					"email": "werewolfmda@gmail.com",
+					"phoneNumber": null,
+					"photoURL": null
+				}
+			],
+			"stsTokenManager": {
+				"refreshToken": "AMf-vBxvbagJovYzvowdyRfTgVu8Dd6LkIQXMqj1_6JsV8KtPUQsdt7pqR4I_sO9GTqlxTR8FQr4dZ6aKFSOGZkldtR8nRjMhT8X329ObbBXHSXRhAXPnm2g7HLxYKMdNQ0Mzp0Ukhv096zOBHwdZkkU7IZgPTjXNKQ8Ra9tE6hXb61FqMnIhY138Bq29RWDQJV8aCHeVBdKLzaUGVDiAS4HKF-Kgin6gQ",
+				"accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjBkMGU4NmJkNjQ3NDBjYWQyNDc1NjI4ZGEyZWM0OTZkZjUyYWRiNWQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWRkLWxlYXJuLXJlcGVhdCIsImF1ZCI6ImFkZC1sZWFybi1yZXBlYXQiLCJhdXRoX3RpbWUiOjE2OTgzMTczMTUsInVzZXJfaWQiOiJGWlRURWJCZjloTUs2MkhKbGc0a0tSNHFwWUcyIiwic3ViIjoiRlpUVEViQmY5aE1LNjJISmxnNGtLUjRxcFlHMiIsImlhdCI6MTY5ODMxNzMxNSwiZXhwIjoxNjk4MzIwOTE1LCJlbWFpbCI6IndlcmV3b2xmbWRhQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJ3ZXJld29sZm1kYUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.aLoLqhcY4VZf_BtOlxfvkko-cP-GoKM-5mkvS6IYzdlMvAtFahxT2e24uPaD5jqQdDz-TfH8FK3qzGpXWarnuaMxSRk6bTWfcJnvqV2c1hx0IdPisHfXB36MmkCFtqqV346spqcc1As2iBPMiSA8s1qo_pgf6bObvZ_9jqeKU0dJK9iLBWXEP1vMZ1WSLBZoI6TfmegLsGwy4UNFBxCOyB5XxMr14B_QVMZShufx_UVW_5fyQSeUV_XsP7gup_Zo5ucQAFeRNLOIk54T61hLYga3CuK1cL1Qv2XNrdoRS_mji61EPS7ZM-h5QVnsfH43-On8if5ADFe5nL6pxmRVBQ",
+				"expirationTime": 1698320916437
+			},
+			"createdAt": "1698317315713",
+			"lastLoginAt": "1698317315713",
+			"apiKey": "AIzaSyDtMcNRHYsL97nRIFIF-LHigGAEDGmlXvg",
+			"appName": "[DEFAULT]"
+		},
+		"providerId": null,
+		"tokenResponse": {
+			"kind": "identitytoolkit#SignupNewUserResponse",
+			"idToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjBkMGU4NmJkNjQ3NDBjYWQyNDc1NjI4ZGEyZWM0OTZkZjUyYWRiNWQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYWRkLWxlYXJuLXJlcGVhdCIsImF1ZCI6ImFkZC1sZWFybi1yZXBlYXQiLCJhdXRoX3RpbWUiOjE2OTgzMTczMTUsInVzZXJfaWQiOiJGWlRURWJCZjloTUs2MkhKbGc0a0tSNHFwWUcyIiwic3ViIjoiRlpUVEViQmY5aE1LNjJISmxnNGtLUjRxcFlHMiIsImlhdCI6MTY5ODMxNzMxNSwiZXhwIjoxNjk4MzIwOTE1LCJlbWFpbCI6IndlcmV3b2xmbWRhQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJ3ZXJld29sZm1kYUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.aLoLqhcY4VZf_BtOlxfvkko-cP-GoKM-5mkvS6IYzdlMvAtFahxT2e24uPaD5jqQdDz-TfH8FK3qzGpXWarnuaMxSRk6bTWfcJnvqV2c1hx0IdPisHfXB36MmkCFtqqV346spqcc1As2iBPMiSA8s1qo_pgf6bObvZ_9jqeKU0dJK9iLBWXEP1vMZ1WSLBZoI6TfmegLsGwy4UNFBxCOyB5XxMr14B_QVMZShufx_UVW_5fyQSeUV_XsP7gup_Zo5ucQAFeRNLOIk54T61hLYga3CuK1cL1Qv2XNrdoRS_mji61EPS7ZM-h5QVnsfH43-On8if5ADFe5nL6pxmRVBQ",
+			"email": "werewolfmda@gmail.com",
+			"refreshToken": "AMf-vBxvbagJovYzvowdyRfTgVu8Dd6LkIQXMqj1_6JsV8KtPUQsdt7pqR4I_sO9GTqlxTR8FQr4dZ6aKFSOGZkldtR8nRjMhT8X329ObbBXHSXRhAXPnm2g7HLxYKMdNQ0Mzp0Ukhv096zOBHwdZkkU7IZgPTjXNKQ8Ra9tE6hXb61FqMnIhY138Bq29RWDQJV8aCHeVBdKLzaUGVDiAS4HKF-Kgin6gQ",
+			"expiresIn": 3600,
+			"localId": "FZTTEbBf9hMK62HJlg4kKR4qpYG2"
+		},
+		"operationType": "signIn"
+	},
+	"meta": {
+		"arg": {
+			"type": "Register",
+			"name": "mike",
+			"email": "werewolfmda@gmail.com",
+			"password": "pokemon"
+		},
+		"requestId": "HcXKBGl_NEIV0SeG_qlhK",
+		"requestStatus": "fulfilled"
+	}
+}

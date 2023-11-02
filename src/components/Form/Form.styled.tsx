@@ -15,7 +15,7 @@ export const FormStyles = styled.form`
 		-15px 15px 150px 2px rgba(112, 98, 63, 0.2),
 		15px -15px 150px 2px rgba(112, 98, 63, 0.2),
 		inset 15px 15px 400px 2px #50aba01f;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 `;
 
 export const FormHeading = styled.h2`
@@ -41,6 +41,10 @@ export const FormInputContainer = styled.div`
 	&:hover,
 	&:focus,
 	&:has(input:focus) {
+		border-color: var(--accent-color);
+		background-color: var(--maine-alt-bg-color);
+	}
+	&:has(p) {
 		border-color: var(--accent-color);
 		background-color: var(--maine-alt-bg-color);
 	}
@@ -72,4 +76,16 @@ export const SubmitButton = styled.button`
 		background-color: var(--transperent-bg);
 		border: 2px solid var(--accent-color);
 	}
+`;
+export const ErrorElement = styled.p`
+	width: fit-content;
+	margin: 0 auto;
+	padding: 2px 20px;
+	border-radius: 4px;
+	border-bottom-right-radius: 24px;
+	border-bottom-left-radius: 24px;
+	text-align: center;
+	font-size: var(--font-size-small);
+	color: var(--text-color);
+	background-color: var(--error-color);
 `;

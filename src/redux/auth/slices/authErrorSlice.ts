@@ -1,19 +1,19 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { register, userlogin, logOut, getCurrent } from '../authOps';
+import { createSlice } from "@reduxjs/toolkit";
+import { userAuth, userLogOut } from "../authOps";
 
-const initialState = '';
+const initialState = "";
 
 const errorSlice = createSlice({
-  name: 'error',
-  initialState: initialState,
-  reducers: {},
-  extraReducers: (builder) => {
-    builder
-      .addCase(register.rejected, (_, { payload }) => payload)
-      .addCase(userlogin.rejected, (_, { payload }) => payload)
-      .addCase(logOut.rejected, (_, { payload }) => payload)
-      .addCase(getCurrent.rejected, (_, { payload }) => payload);
-  },
+	name: "error",
+	initialState: initialState,
+	reducers: {},
+	extraReducers: builder => {
+		builder
+			.addCase(userAuth.rejected, (_, { payload }) => payload)
+			.addCase(userLogOut.rejected, (_, { payload }) => payload)
+			.addCase(userAuth.pending, () => initialState)
+			.addCase(userLogOut.pending, () => initialState);
+	},
 });
 
 export const errorReducer = errorSlice.reducer;

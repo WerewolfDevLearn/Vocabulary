@@ -25,6 +25,7 @@
 		"paths": {
 			"components/*": ["./components/*"],
 			"pages/*": ["./pages/*"],
+			"redux/*": ["./redux/*"],
 			"hooks/*": ["./hooks/*"],
 			"api/*": ["./api/*"],
 			"utils/*": ["./utils/*"]

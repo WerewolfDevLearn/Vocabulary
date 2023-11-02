@@ -1,10 +1,10 @@
 @font-face {
 	font-family: "PixelifySans-Regular";
-	src: url("../fonts/PixelifySans-Regular.ttf");
+	src: url("../css/fonts/PixelifySans-Regular.ttf");
 	font-weight: 400;
 }
 @font-face {
 	font-family: "Saira-Regular";
-	src: url("../fonts/Saira-Regular.ttf");
+	src: url("../css/fonts/Saira-Regular.ttf");
 	font-weight: 400;
 }
