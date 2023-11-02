@@ -9,7 +9,7 @@ import {
 } from "./Form.styled";
 //Types
 import { IFormInput, IForm } from "./FormTypes";
-import { useAppDispatch } from "../../redux/store";
+import { useAppDispatch } from "reduxfiles/store";
 import { authDataType } from "../../services/serviceTypes";
 //Libraries
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -17,7 +17,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { registerSchema, loginSchema } from "./validationSchemas";
 
-import { userAuth } from "../../redux/auth/authOps";
+import { userAuth } from "reduxfiles/auth/authOps";
 
 export default function Form({ formName }: IForm) {
 	const schema = formName === "Register" ? registerSchema : loginSchema;
