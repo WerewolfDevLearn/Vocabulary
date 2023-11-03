@@ -19,9 +19,21 @@ function logOutRequestObject(): RequestInit {
 	};
 }
 
+function getCurrentRequestObdject(token: string): RequestInit {
+	return {
+		method: "GET",
+		body: "",
+		headers: {
+			"Content-Type": "application/json",
+			Authorization: `Bearer ${token}`,
+		},
+	};
+}
+
 const requestObjects = {
 	auth: authRequestObject,
 	logOut: logOutRequestObject,
+	getCurrentUser: getCurrentRequestObdject,
 };
 
 export default requestObjects;

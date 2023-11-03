@@ -29,6 +29,6 @@
 			"reduxfiles/*": ["reduxfiles/*"]
 		}
 	},
-	"include": ["src", "default", "templates"],
+	"include": ["src", "default", "templates", "Layout"],
 	"references": [{ "path": "./tsconfig.node.json" }]
 }

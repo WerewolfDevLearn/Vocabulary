@@ -1,20 +1,20 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { authDataType, AuthPayload } from "../../services/serviceTypes";
-import { authFetch, logOutFetch } from "../../services/auth";
+import { authFetch, logOutFetch, getCurrent } from "../../services/auth";
+import { RootState } from "reduxfiles/store";
 
-export const userAuth = createAsyncThunk<
-	AuthPayload,
-	authDataType,
-	{ rejectValue: string }
->("user/Auth", async function (authData, { rejectWithValue }) {
-	try {
-		const response = await authFetch(authData);
-		return response;
-	} catch (error: unknown) {
-		const finalError = error as Error;
-		return rejectWithValue(finalError.message);
+export const userAuth = createAsyncThunk<AuthPayload, authDataType, { rejectValue: string }>(
+	"user/Auth",
+	async function (authData, { rejectWithValue }) {
+		try {
+			const response = await authFetch(authData);
+			return response;
+		} catch (error: unknown) {
+			const finalError = error as Error;
+			return rejectWithValue(finalError.message);
+		}
 	}
-});
+);
 export const userLogOut = createAsyncThunk<unknown, unknown, { rejectValue: string }>(
 	"user/LogOut",
 	async function (_, { rejectWithValue }) {
@@ -27,22 +27,20 @@ export const userLogOut = createAsyncThunk<unknown, unknown, { rejectValue: stri
 		}
 	}
 );
-// export const logOut = createAsyncThunk<undefined, undefined, { rejectValue: string }>(
-// 	"user/LogOut",
-// 	async (_, { rejectWithValue }) => {
-// 		try {
-// 			const response = await userLogOut();
-// 			token.unset();
-// 			return response;
-// 		} catch (error: unknown) {
-// 			if (axios.isAxiosError<{ error: { message: string } }>(error)) {
-// 				const errorAxios = error as AxiosError;
-// 				return rejectWithValue(errorAxios.message);
-// 			}
-// 			console.error(error);
-// 		}
-// 	}
-// );
+
+export const getCurrentUser = createAsyncThunk<AuthPayload, unknown, { rejectValue: string; state: RootState }>(
+	"user/GetCurrent",
+	async function (_, { rejectWithValue, getState }) {
+		try {
+			const response = await getCurrent(getState().user.token);
+			return response;
+		} catch (error: unknown) {
+			const finalError = error as Error;
+			return rejectWithValue(finalError.message);
+		}
+	}
+);
+
 // export const getCurrent = createAsyncThunk<
 // 	IOCurrentUser,
 // 	undefined,

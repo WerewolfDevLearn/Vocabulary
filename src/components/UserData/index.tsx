@@ -6,7 +6,7 @@ export default function UserData() {
 	return (
 		<UserDataStyles>
 			<UserName>{user.name}</UserName>
-			<UserPhoto>{user.avatarURL}</UserPhoto>
+			<UserPhoto src={user.avatarURL} alt={user.name} />
 		</UserDataStyles>
 	);
 }

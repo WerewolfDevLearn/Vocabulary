@@ -13,3 +13,11 @@ export async function logOutFetch() {
 	const data = await errorCatch(response);
 	return data;
 }
+export async function getCurrent(token: string) {
+	const response = await fetch(
+		`${baseURL}/auth/logout`,
+		requestObjects.getCurrentUser(token)
+	);
+	const data = await errorCatch(response);
+	return data;
+}

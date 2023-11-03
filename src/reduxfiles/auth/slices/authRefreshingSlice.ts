@@ -1,18 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
-// import { getCurrent } from "../authOps";
+import { getCurrentUser } from "../authOps";
 
-// const initialState = false;
+const initialState = false;
 
-// const isRefreshingSlice = createSlice({
-// 	name: "isRefreshing",
-// 	initialState: initialState,
-// 	reducers: {},
-// 	extraReducers: builder => {
-// 		builder
-// 			.addCase(getCurrent.pending, () => true)
-// 			.addCase(getCurrent.fulfilled, () => false)
-// 			.addCase(getCurrent.rejected, () => false);
-// 	},
-// });
+const isRefreshingSlice = createSlice({
+	name: "isRefreshing",
+	initialState: initialState,
+	reducers: {},
+	extraReducers: builder => {
+		builder
+			.addCase(getCurrentUser.pending, () => true)
+			.addCase(getCurrentUser.fulfilled, () => false)
+			.addCase(getCurrentUser.rejected, () => false);
+	},
+});
 
-// export const isRefreshingReducer = isRefreshingSlice.reducer;
+export const isRefreshingReducer = isRefreshingSlice.reducer;

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { userAuth, userLogOut } from "../authOps";
+import { userAuth, userLogOut, getCurrentUser } from "../authOps";
 import { IUserState } from "../../reduxTypes";
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
@@ -19,6 +19,7 @@ const userSlice = createSlice({
 	extraReducers: builder => {
 		builder
 			.addCase(userAuth.fulfilled, (_, { payload }) => payload)
+			.addCase(getCurrentUser.fulfilled, (_, { payload }) => payload)
 			.addCase(userLogOut.fulfilled, () => initialState);
 	},
 });
