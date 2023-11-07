@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
 
-export const ButtonStyles = styled(NavLink)`
+export const ButtonStyles = styled.button`
 	width: fit-content;
 	display: block;
 	background-color: var(--full-transperent-bg);

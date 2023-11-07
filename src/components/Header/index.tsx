@@ -1,6 +1,6 @@
 import { HeaderContainer, LogoLink, Navigation } from "./Header.styled";
 import routes from "../../routes";
-import Button from "components/Form/Button";
+import NavLink from "components/UIControl/NavLink";
 import UserData from "components/UserData";
 
 import {} from "./Header.styled";
@@ -10,9 +10,9 @@ export default function Header() {
 		<HeaderContainer>
 			<LogoLink to={routes.userPage}>Vocabulary</LogoLink>
 			<Navigation>
-				<Button name='ADD' key='add' routName={routes.addPage} />
-				<Button name='LEARN' key='learn' routName={routes.learnPage} />
-				<Button name='REPEAT' key='repeat' routName={routes.repeatPage} />
+				<NavLink name='ADD' key='add' routName={routes.addPage} />
+				<NavLink name='LEARN' key='learn' routName={routes.learnPage} />
+				<NavLink name='REPEAT' key='repeat' routName={routes.repeatPage} />
 			</Navigation>
 			<UserData />
 		</HeaderContainer>

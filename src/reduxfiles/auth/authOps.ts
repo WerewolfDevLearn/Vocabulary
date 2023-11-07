@@ -28,11 +28,14 @@ export const userLogOut = createAsyncThunk<unknown, unknown, { rejectValue: stri
 	}
 );
 
-export const getCurrentUser = createAsyncThunk<AuthPayload, unknown, { rejectValue: string; state: RootState }>(
+export const getCurrentUser = createAsyncThunk<AuthPayload, undefined, { rejectValue: string; state: RootState }>(
 	"user/GetCurrent",
 	async function (_, { rejectWithValue, getState }) {
 		try {
-			const response = await getCurrent(getState().user.token);
+			const state = getState() as RootState;
+			const stateToken = state.user.token;
+			if (!stateToken) return rejectWithValue("Please register or login!");
+			const response = await getCurrent(stateToken);
 			return response;
 		} catch (error: unknown) {
 			const finalError = error as Error;
@@ -40,23 +43,3 @@ export const getCurrentUser = createAsyncThunk<AuthPayload, unknown, { rejectVal
 		}
 	}
 );
-
-// export const getCurrent = createAsyncThunk<
-// 	IOCurrentUser,
-// 	undefined,
-// 	{ rejectValue: string }
-// >("user/GetCurrent", async (_, { rejectWithValue, getState }) => {
-// 	try {
-// 		const state = getState() as RootState;
-// 		const stateToken = state.user.token;
-// 		if (!stateToken) return rejectWithValue("Please register or login!");
-// 		const credentials = await getCurrentUser(stateToken);
-// 		return credentials;
-// 	} catch (error: unknown) {
-// 		if (axios.isAxiosError<{ error: { message: string } }>(error)) {
-// 			const errorAxios = error as AxiosError;
-// 			return rejectWithValue(errorAxios.message);
-// 		}
-// 		console.error(error);
-// 	}
-// });

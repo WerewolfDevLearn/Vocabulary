@@ -3,26 +3,18 @@ import { useDispatch } from "react-redux";
 
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { persistedUserReducer } from "./auth/slices/authfulfilledSlice";
-// import { isRefreshingReducer } from "./auth/slices/authRefreshingSlice";
+import { isRefreshingReducer } from "./auth/slices/authRefreshingSlice";
 import { errorReducer } from "./auth/slices/authErrorSlice";
 import { isLoadingReducer } from "./auth/slices/authIsLoadingSlice";
 
-import {
-	persistStore,
-	FLUSH,
-	REHYDRATE,
-	PAUSE,
-	PERSIST,
-	PURGE,
-	REGISTER,
-} from "redux-persist";
+import { persistStore, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from "redux-persist";
 
 export const store = configureStore({
 	reducer: {
 		user: persistedUserReducer,
 		error: errorReducer,
 		isLoading: isLoadingReducer,
-		// isRefreshing: isRefreshingReducer,
+		isRefreshing: isRefreshingReducer,
 	},
 	middleware: gDM =>
 		gDM({

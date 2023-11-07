@@ -14,10 +14,7 @@ export async function logOutFetch() {
 	return data;
 }
 export async function getCurrent(token: string) {
-	const response = await fetch(
-		`${baseURL}/auth/logout`,
-		requestObjects.getCurrentUser(token)
-	);
+	const response = await fetch(`${baseURL}/auth/current`, requestObjects.getCurrentUser(token));
 	const data = await errorCatch(response);
 	return data;
 }

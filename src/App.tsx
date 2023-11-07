@@ -1,5 +1,6 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+
 import routes from "./routes";
 import AuthPage from "pages/AuthPage";
 import UserPage from "pages/UserPage";
@@ -7,12 +8,20 @@ import ErrorPage from "pages/ErrorPage";
 import AddPage from "pages/AddPage";
 import LearnPage from "pages/LearnPage";
 import RepeatPage from "pages/RepeatPage";
+
 import Loader from "components/Loader/Loader";
 import PubliceRourtes from "components/Routes/PubliceRoutes";
 import PrivateRourtes from "components/Routes/PrivateRoutes";
 import Layout from "components/Layout";
 
+import { useAppDispatch } from "reduxfiles/store";
+import { getCurrentUser } from "reduxfiles/auth/authOps";
+
 function App() {
+	const dispatch = useAppDispatch();
+	useEffect(() => {
+		dispatch(getCurrentUser());
+	}, []);
 	return (
 		<Suspense fallback={<Loader />}>
 			<Routes>

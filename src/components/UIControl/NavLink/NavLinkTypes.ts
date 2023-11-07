@@ -1,4 +1,4 @@
-export type ButtonTypes = {
+export type NavLinkTypes = {
 	name: string;
 	routName: string;
 };

@@ -30,7 +30,7 @@ export const FormLabel = styled.label`
 
 export const FormInputContainer = styled.div`
 	border: 2px solid var(--low-accent-color);
-	background-color: var(--maine-bg-color);
+	background-color: var(--main-bg-color);
 	padding: 4px;
 	margin-bottom: 25px;
 	border-top-left-radius: 10px;
@@ -59,7 +59,7 @@ export const FormInput = styled.input`
 	border-bottom-left-radius: 35px;
 	border-bottom-right-radius: 5px;
 	font-size: var(--main-font-size);
-	background-color: var(--maine-bg-color);
+	background-color: var(--main-bg-color);
 `;
 
 export const SubmitButton = styled.button`

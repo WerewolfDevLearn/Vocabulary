@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 
 export const HeaderContainer = styled.header`
 	display: flex;
-	align-items: baseline;
+	align-items: center;
 	padding: 25px 130px;
-	border-bottom: 4px solid var(--accent-color);
+	border-radius: 50px;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	border: 4px solid var(--accent-color);
 	background-color: var(--low-accent-color);
 `;
 
