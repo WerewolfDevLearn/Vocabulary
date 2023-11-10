@@ -20,6 +20,7 @@ const userSlice = createSlice({
 		builder
 			.addCase(userAuth.fulfilled, (_, { payload }) => payload)
 			.addCase(getCurrentUser.fulfilled, (_, { payload }) => payload)
+			.addCase(getCurrentUser.rejected, () => initialState)
 			.addCase(userLogOut.fulfilled, () => initialState);
 	},
 });

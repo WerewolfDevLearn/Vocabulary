@@ -2,62 +2,56 @@ import {
 	CircularProgressBarStyles,
 	Rating,
 	Legend,
-	Block1,
-	Block2,
-	Block3,
+	ChartContainer,
 	SpecificationsList,
 	Specification,
 	CountersList,
 	Counter,
 } from "./CircularProgressBar.styled";
+import RadialChart from "components/RadialChart";
 
-export default function CircularProgressBar({ arg }: any) {
-	const generator = () => {
-		const arr: string[] = [];
-		for (let i = 0; i < 100; i++) {
-			arr.push(`${3.6 * i}deg`);
-		}
-
-		return arr;
+export default function CircularProgressBar() {
+	const colors = {
+		color01: "#e7a323",
+		color02: "#00ffce",
+		color03: "#fff",
 	};
-	const array = generator();
 	return (
 		<CircularProgressBarStyles>
-			<Rating key='ratioChart'>
+			<Rating>
 				<Legend>
-					<SpecificationsList>
-						<Specification key='added' color='#fff'>
+					<SpecificationsList key='SpecificationsList'>
+						<Specification key='added' color={colors.color03}>
 							ADDED
 						</Specification>
-						<Specification key='learned' color='#00ffce'>
+						<Specification key='learned' color={colors.color02}>
 							LEARNED
 						</Specification>
-						<Specification key='repeated' color='#e7a323'>
+						<Specification key='repeated' color={colors.color01}>
 							REPEATED
 						</Specification>
 					</SpecificationsList>
-					<CountersList>
-						<Counter key='added-counter' $color='#fff'>
+					<CountersList key='CountersList'>
+						<Counter key='addedcounter' color={colors.color03}>
 							000000
 						</Counter>
-						<Counter key='learned-counter' $color='#00ffce'>
+						<Counter key='learnedcounter' color={colors.color02}>
 							000000
 						</Counter>
-						<Counter key='repeated-counter' $color='#e7a323'>
+						<Counter key='repeatedcounter' color={colors.color01}>
 							000000
 						</Counter>
 					</CountersList>
 				</Legend>
-
-				{array.map(item => {
-					return (
-						<>
-							<Block1 $angle={item} $color='#e7a323' key={item} />
-							<Block2 $angle={item} $color='#00ffce' key={`${item}2`} />
-							<Block3 $angle={item} $color='#ffffff' key={`${item}3`} />
-						</>
-					);
-				})}
+				<ChartContainer key='Chart01Container'>
+					<RadialChart n={50} elementColor={colors.color01} blockName='block01' />
+				</ChartContainer>
+				<ChartContainer key='Chart02Container'>
+					<RadialChart n={40} elementColor={colors.color02} blockName='block02' />
+				</ChartContainer>
+				<ChartContainer key='Chart03Container'>
+					<RadialChart n={30} elementColor={colors.color03} blockName='block03' />
+				</ChartContainer>
 			</Rating>
 		</CircularProgressBarStyles>
 	);

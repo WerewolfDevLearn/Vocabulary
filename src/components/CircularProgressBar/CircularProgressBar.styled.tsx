@@ -11,6 +11,9 @@ export const Rating = styled.div`
 	position: relative;
 	width: 100%;
 	height: 100%;
+	background-color: #393f4212;
+	border-radius: 50%;
+	box-shadow: 0 0 15px #393f4280;
 `;
 export const Legend = styled.div`
 	position: absolute;
@@ -29,37 +32,9 @@ export const Specification = styled.li<{ $color?: string }>`
 `;
 
 export const CountersList = styled.ul``;
-export const Counter = styled.li<{ $color: string }>`
+export const Counter = styled.li<{ color: string }>`
 	text-align: start;
 	color: ${props => props.color};
 `;
 
-export const Block1 = styled.div<{ $angle: string; $color: string }>`
-	position: absolute;
-	width: 3px;
-	height: 15px;
-	background: ${props => props.$color};
-	left: 50%;
-	transform-origin: 50% 225px;
-	transform: rotate(${props => props.$angle});
-`;
-export const Block2 = styled.div<{ $angle: string; $color: string }>`
-	position: absolute;
-	top: 25px;
-	width: 3px;
-	height: 15px;
-	background: ${props => props.$color};
-	left: 50%;
-	transform-origin: 50% 200px;
-	transform: rotate(${props => props.$angle});
-`;
-export const Block3 = styled.div<{ $angle: string; $color: string }>`
-	position: absolute;
-	top: 50px;
-	left: 50%;
-	width: 3px;
-	height: 15px;
-	background: ${props => props.$color};
-	transform-origin: 50% 175px;
-	transform: rotate(${props => props.$angle});
-`;
+export const ChartContainer = styled.ul``;
