@@ -1,10 +1,16 @@
-import { AddPageStyles } from "./AddPage.styled";
+import AddFrom from "components/Forms/AddFrom";
+import Recent from "components/Recent";
 
-export default function AddPage({ arg }: any) {
-	return (
-		<AddPageStyles>
-			<h2>AddPage</h2>
-			<p>{arg}</p>
-		</AddPageStyles>
-	);
+import { AddPageStyles, PageHeading, Wrapper } from "./AddPage.styled";
+
+export default function AddPage() {
+  return (
+    <AddPageStyles>
+      <PageHeading>Add</PageHeading>
+      <Wrapper>
+        <AddFrom />
+        <Recent />
+      </Wrapper>
+    </AddPageStyles>
+  );
 }

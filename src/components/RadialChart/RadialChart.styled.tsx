@@ -12,6 +12,7 @@ export const Block1 = styled.div.attrs<{ $angle: string; $bg: string }>(props =>
 	height: 15px;
 	left: 50%;
 	transform-origin: 50% 225px;
+	outline: 1px solid rgb(67, 61, 61);
 `;
 
 export const Block2 = styled.div.attrs<{ $angle: string; $bg: string }>(props => ({
@@ -27,6 +28,7 @@ export const Block2 = styled.div.attrs<{ $angle: string; $bg: string }>(props =>
 	height: 15px;
 	left: 50%;
 	transform-origin: 50% 200px;
+	outline: 1px solid rgb(67, 61, 61);
 `;
 export const Block3 = styled.div.attrs<{ $angle: string; $bg: string }>(props => ({
 	style: {
@@ -41,6 +43,7 @@ export const Block3 = styled.div.attrs<{ $angle: string; $bg: string }>(props =>
 	height: 15px;
 	left: 50%;
 	transform-origin: 50% 175px;
+	outline: 1px solid rgb(67, 61, 61);
 `;
 const blocks: { [key: string]: typeof Block1 } = {
 	block01: Block1,

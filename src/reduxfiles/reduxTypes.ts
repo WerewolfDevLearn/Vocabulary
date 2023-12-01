@@ -6,7 +6,8 @@ export type Icredentials = {
 export type IUserState = {
 	id: string;
 	token: string;
-	email: string;
 	name: string;
-	avatarURL: string;
+	email: string;
+	phone: string;
+	avatarUrl: string;
 };

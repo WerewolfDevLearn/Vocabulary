@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AuthPagePageStyles } from "./AuthPage.styled";
 import { AuthPageState } from "./AuthPageTypes";
 
-import Form from "components/Form";
+import Form from "components/Forms/AuthForm";
 import SwitchButton from "components/SwitchButton";
 
 export default function AuthPage() {

@@ -11,6 +11,10 @@ export default defineConfig({
 			components: "/src/components",
 			pages: "/src/pages",
 			reduxfiles: "/src/reduxfiles",
+			utilities: "/src/utilities",
+			services: "/src/services",
+			icons: "/src/icons",
+			hooks: "/src/hooks",
 		},
 	},
 });

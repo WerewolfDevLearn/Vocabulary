@@ -2,10 +2,11 @@ import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
 
 import { setupListeners } from "@reduxjs/toolkit/query";
-import { persistedUserReducer } from "./auth/slices/authfulfilledSlice";
-import { isRefreshingReducer } from "./auth/slices/authRefreshingSlice";
-import { errorReducer } from "./auth/slices/authErrorSlice";
-import { isLoadingReducer } from "./auth/slices/authIsLoadingSlice";
+import { persistedUserReducer } from "./slices/authslices/authfulfilledSlice";
+import { isRefreshingReducer } from "./slices/authslices/authRefreshingSlice";
+import { errorReducer } from "./slices/authslices/authErrorSlice";
+import { isLoadingReducer } from "./slices/authslices/authIsLoadingSlice";
+import { profileUpdReducer } from "./slices/profileUpdslices/profileUpdLoading";
 
 import { persistStore, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from "redux-persist";
 
@@ -15,6 +16,7 @@ export const store = configureStore({
 		error: errorReducer,
 		isLoading: isLoadingReducer,
 		isRefreshing: isRefreshingReducer,
+		profileUpdLoading: profileUpdReducer,
 	},
 	middleware: gDM =>
 		gDM({

@@ -12,7 +12,7 @@ export default function RadialChart({ n, elementColor, blockName }: IProps) {
 			const element = {
 				angle: `${3.6 * i}deg`,
 				id: nanoid(),
-				color: i >= n ? "transparent" : color,
+				color: i >= n + 1 ? "transparent" : color,
 			};
 
 			arr.push(element);

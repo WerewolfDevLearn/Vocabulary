@@ -21,12 +21,17 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
+		/* pathes*/
 		"baseUrl": "src",
 		"paths": {
 			"src/*": ["src/*"],
 			"components/*": ["components/*"],
 			"pages/*": ["pages/*"],
-			"reduxfiles/*": ["reduxfiles/*"]
+			"reduxfiles/*": ["reduxfiles/*"],
+			"utilities/*": ["utilities/*"],
+			"services/*": ["services/*"],
+			"icons/*": ["icons/*"],
+			"hooks/*": ["hooks/*"]
 		}
 	},
 	"include": ["src", "default", "templates", "src/components/Layout"],

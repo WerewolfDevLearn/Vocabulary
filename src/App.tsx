@@ -15,7 +15,7 @@ import PrivateRourtes from "components/Routes/PrivateRoutes";
 import Layout from "components/Layout";
 
 import { useAppDispatch } from "reduxfiles/store";
-import { getCurrentUser } from "reduxfiles/auth/authOps";
+import { getCurrentUser } from "reduxfiles/operations/auth/authOps";
 
 function App() {
 	const dispatch = useAppDispatch();
