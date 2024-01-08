@@ -6,7 +6,7 @@ import {
   ColumnBackground,
 } from "./UserPage.styled";
 import CircularProgressBar from "components/CircularProgressBar";
-import Date from "components/Date";
+import Date from "components/DateComp";
 import UserProfileForm from "components/Forms/UserProfileForm";
 export default function UserPage() {
   return (

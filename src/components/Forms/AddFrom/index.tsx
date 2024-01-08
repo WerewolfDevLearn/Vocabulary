@@ -1,45 +1,33 @@
-import { useForm, SubmitHandler } from "react-hook-form";
-
-import FromError from "components/Forms/FromError";
-import DragNDropImgInput from "../DragNDropImgInput";
+import DragNDropImgInput from "../AddFromImgInput/DragNDropImgInput";
+import AddFormInput from "../AddFormInput";
+import AddFormTextArea from "../AddFormTextArea";
 
 import {
   AddFromContainer,
   AddForm,
-  AddFormInputText,
-  AddFormTextArea,
-  AddFormImageInput,
-  AddFormFieldWrapper,
-  AddFormInputWrapper,
-  AddFormInputLabel,
+  AddFromSubmitButton,
+  InnerBackground,
 } from "./AddFrom.styled";
 
 export default function AddFrom() {
+  const onSubimtForm = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    formData.forEach((value, name) => {
+      console.log(`${name}:`, value);
+    });
+  };
+
   return (
     <AddFromContainer>
-      <AddForm>
-        <AddFormFieldWrapper>
-          <AddFormInputLabel htmlFor="tag">Tag</AddFormInputLabel>
-          <AddFormInputWrapper>
-            <AddFormInputText id="tag" />
-          </AddFormInputWrapper>
-          <FromError string="Error" />
-        </AddFormFieldWrapper>
-        <AddFormFieldWrapper>
-          <AddFormInputLabel htmlFor="term">Term</AddFormInputLabel>
-          <AddFormInputWrapper>
-            <AddFormInputText id="term" />
-          </AddFormInputWrapper>
-          <FromError string="Error" />
-        </AddFormFieldWrapper>
-        <AddFormFieldWrapper>
-          <AddFormInputLabel htmlFor="definitions">Definitions</AddFormInputLabel>
-          <AddFormInputWrapper>
-            <AddFormTextArea id="definitions" />
-          </AddFormInputWrapper>
-          <FromError string="Error" />
-        </AddFormFieldWrapper>
+      <AddForm onSubmit={onSubimtForm}>
+        <AddFormInput name="Tag" placeholder="Add tag" />
+        <AddFormInput name="Term" placeholder="Add term" />
+        <AddFormTextArea name="Definition" placeholder="Add definition" />
         <DragNDropImgInput />
+        <AddFromSubmitButton>
+          <InnerBackground>ADD Term</InnerBackground>
+        </AddFromSubmitButton>
       </AddForm>
     </AddFromContainer>
   );

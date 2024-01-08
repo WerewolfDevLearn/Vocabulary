@@ -20,7 +20,9 @@ import { userAuth } from "reduxfiles/operations/auth/authOps";
 export default function Form({ formName }: IForm) {
   const dispatch = useAppDispatch();
 
-  const { register, formState, handleSubmit } = useForm<IFormInput>({ mode: "onChange" });
+  const { register, formState, handleSubmit } = useForm<IFormInput>({
+    mode: "onChange",
+  });
   const { errors, dirtyFields } = formState;
 
   const isDirtyName = !!dirtyFields.name;

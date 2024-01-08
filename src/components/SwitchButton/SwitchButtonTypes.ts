@@ -1,4 +1,4 @@
 export interface ISwitchButton {
-	text: "Register" | "Login";
-	onClick: (text: "Register" | "Login") => void;
+  text: string;
+  onClick: (text: string) => void;
 }

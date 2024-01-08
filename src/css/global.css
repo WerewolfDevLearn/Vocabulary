@@ -29,9 +29,23 @@ body {
   font-family: "Saira-Regular";
   font-size: var(--main-font-size);
   color: var(--text-color);
-  background-image: radial-gradient(61.6% 59.83% at 50% 50%, #a77413 0%, rgb(26, 58, 52) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-image: radial-gradient(
+    61.6% 59.83% at 50% 50%,
+    #a77413 0%,
+    rgb(26, 58, 52) 100%
+  );
   caret-color: var(--green-color);
+  min-height: 100vh;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 5px;
 }

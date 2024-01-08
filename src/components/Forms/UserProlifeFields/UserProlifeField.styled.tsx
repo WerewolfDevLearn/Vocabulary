@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
-export const UserProlifeInputFrom = styled.form<{ $isvalid: boolean; disabled: boolean }>`
+export const UserProlifeInputFrom = styled.form<{
+  $isvalid: boolean;
+  disabled: boolean;
+}>`
   position: relative;
   z-index: 10;
   width: 390px;

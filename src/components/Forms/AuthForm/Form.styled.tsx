@@ -16,6 +16,7 @@ export const FormStyles = styled.form`
     15px -15px 150px 2px rgba(112, 98, 63, 0.2),
     inset 15px 15px 400px 2px #50aba01f;
   margin-bottom: 5px;
+  margin-inline: auto;
 `;
 
 export const FormHeading = styled.h2`

@@ -48,24 +48,12 @@ export const ImageUploaderInput = styled.input.attrs({
   padding: 0;
   margin: 0;
 `;
-
-export const ImageUploaderPreviewList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-`;
-export const ImageUploaderPreviewItem = styled.li`
-  width: calc((100% / 5) - 10px);
-  border: 2px solid var(--accent-color);
-  border-radius: 16px 8px;
+export const ImageUploaderLabel = styled.label`
+  opacity: 0;
+  height: 0;
+  width: 0;
+  line-height: 0;
   overflow: hidden;
-`;
-export const ImageUploaderPreviewContent = styled.img.attrs<{ src: string; alt: string }>(
-  (props) => ({
-    src: props.src,
-    alt: props.alt,
-  }),
-)`
-  width: 100%;
-  height: auto;
+  padding: 0;
+  margin: 0;
 `;

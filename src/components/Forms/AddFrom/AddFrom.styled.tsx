@@ -36,11 +36,10 @@ export const AddFormInputText = styled.input.attrs({
   padding-inline: 20px;
   padding-block: 4px;
 `;
-export const AddFormTextArea = styled.textarea`
+export const AddFormTextAreaStatic = styled.textarea`
   font-size: var(--font-size-regular);
   display: block;
   width: 100%;
-
   line-height: 1;
   height: 100px;
   padding-inline: 20px;
@@ -62,4 +61,34 @@ export const AddFormInputWrapper = styled.div`
   padding-inline: 20px;
   padding-block: 4px;
   background-color: var(--transperent-green-color);
+`;
+export const AddFromSubmitButton = styled.button.attrs({
+  type: "submit",
+})`
+  display: block;
+  text-align: center;
+  padding: 4px;
+  width: 30%;
+  margin: 0 auto;
+  background-color: var(--transperent-bg);
+  border: 2px solid var(--accent-color);
+  border-top-left-radius: 12px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 12px;
+`;
+
+export const InnerBackground = styled.span`
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 8px;
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 `;
