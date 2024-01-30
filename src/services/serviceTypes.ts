@@ -1,46 +1,58 @@
 export type authDataType = {
-	type: "Login" | "Register";
-	name?: string;
-	email: string;
-	password: string;
+  type: "Login" | "Register";
+  name?: string;
+  email: string;
+  password: string;
 };
 
 export type UpdAvatarDataType = {
-	token: string;
-	file: FormData;
+  token: string;
+  file: FormData;
 };
 export type UpdNameDataType = {
-	token: string;
-	name: string;
+  token: string;
+  name: string;
 };
 export type UpdEmailDataType = {
-	token: string;
-	email: string;
+  token: string;
+  email: string;
 };
 export type UpdPhoneDataType = {
-	token: string;
-	phone: string;
+  token: string;
+  phone: string;
 };
 
 export type AvatarUpdFile = FormData;
 
 export type AuthPayloadType = {
-	id: string;
-	token: string;
-	name: string;
-	email: string;
-	phone: string;
-	avatarUrl: string;
+  id: string;
+  token: string;
+  name: string;
+  email: string;
+  phone: string;
+  avatarUrl: string;
 };
 export type UpdAvataPayloadType = {
-	avatarUrl: string;
+  avatarUrl: string;
 };
 export type UpdNamePayloadType = {
-	name: string;
+  name: string;
 };
 export type UpdEmailPayloadType = {
-	email: string;
+  email: string;
 };
 export type UpdPhonePayloadType = {
-	phone: string;
+  phone: string;
+};
+
+export type NoteType = {
+  tag: string;
+  term: string;
+  definition: string;
+  options?: string[];
+};
+
+export type CreateNoteType = {
+  note: FormData;
+  token: string;
 };

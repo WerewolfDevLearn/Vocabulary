@@ -29,7 +29,11 @@ const rule: FileRuleType = {
   },
 };
 
-export default function DragNDropImgInput() {
+export default function DragNDropImgInput({
+  name = "ImageUploader",
+}: {
+  name?: string;
+}) {
   const filePicker = useRef<HTMLInputElement>(null);
   const imagesInput = filePicker.current;
   const [drag, setDrag] = useState(false);
@@ -121,10 +125,11 @@ export default function DragNDropImgInput() {
               Image uploader
             </ImageUploaderLabel>
             <ImageUploaderInput
+              data-valid={!error}
               ref={filePicker}
               onChange={handleInputChange}
               id="imageUploader"
-              name="imageUploader"
+              name={`${name}`}
             />
           </DragNDropArea>
           <ImageUploaderPreview

@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { inputValidation } from "utilities/inputValidation";
-import FromError from "../FromError";
+import FromError from "components/Forms/FromError";
 import {
   AddFormFieldWrapper,
   AddFormInputLabel,
   AddFormInputWrapper,
-} from "../FormsBasicStyles.styled";
+} from "components/Forms/FormsBasicStyles.styled";
 import { AddFormInputText } from "./AddFormInput.styled";
 import { IAddFormInput } from "./AddFormInputType";
 
@@ -37,6 +37,7 @@ export default function AddFormInput({ name, placeholder }: IAddFormInput) {
       <AddFormInputLabel htmlFor={name}>{name}</AddFormInputLabel>
       <AddFormInputWrapper $valid={!error} $isTouched={!touched}>
         <AddFormInputText
+          data-valid={!error}
           id={name}
           name={name}
           placeholder={placeholder}

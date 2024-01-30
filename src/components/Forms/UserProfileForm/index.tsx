@@ -1,4 +1,4 @@
-import UserProfileAvatar from "components/Forms/UserProfileAvatar";
+import UserProfileAvatar from "../UserProfileAvatar";
 import {
   UserProfileFieldName,
   UserProfileFieldEmail,

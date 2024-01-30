@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import FromError from "../FromError";
+import FromError from "components/Forms/FromError";
 import { inputValidation } from "utilities/inputValidation";
 
 import { IAddFormTextArea } from "./AddFormTextAreaTypes";
@@ -11,7 +11,7 @@ import {
   AddFormFieldWrapper,
   AddFormInputLabel,
   AddFormInputWrapper,
-} from "../FormsBasicStyles.styled";
+} from "components/Forms/FormsBasicStyles.styled";
 
 export default function AddFormTextArea({
   name,
@@ -43,6 +43,7 @@ export default function AddFormTextArea({
       <AddFormInputLabel htmlFor={name}>{name}</AddFormInputLabel>
       <AddFormInputWrapper $valid={!error} $isTouched={!touched}>
         <AddFormTextAreaElem
+          data-valid={!error}
           id={name}
           name={name}
           placeholder={placeholder}

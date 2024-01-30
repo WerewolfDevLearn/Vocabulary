@@ -20,8 +20,8 @@ export default function DateComp() {
 
   return (
     <DateStyles>
-      <DateDay>{`${date.getDate()}/${
-        date.getMonth() + 1
+      <DateDay>{`${date.getDate().toString().padStart(2, "0")}/${
+        date.getMonth().toString().padStart(1, "0") + 1
       }/${date.getFullYear()}`}</DateDay>
       <DateTime>{`${hours}:${minutes}:${seconds}`}</DateTime>
     </DateStyles>
