@@ -1,15 +1,25 @@
 import { useState } from "react";
 import { inputValidation } from "utilities/inputValidation";
+
 import FromError from "components/Forms/FromError";
+import DeleteButton from "components/UIControl/DeleteButton";
+
 import {
   AddFormFieldWrapper,
   AddFormInputLabel,
   AddFormInputWrapper,
 } from "components/Forms/FormsBasicStyles.styled";
+
 import { AddFormInputText } from "./AddFormInput.styled";
 import { IAddFormInput } from "./AddFormInputType";
 
-export default function AddFormInput({ name, placeholder }: IAddFormInput) {
+export default function AddFormInput({
+  name,
+  placeholder,
+  idx,
+  callBack,
+  callBackFunction,
+}: IAddFormInput) {
   const initialState = "";
   const [error, setError] = useState<string>("");
   const [value, setValue] = useState<string>(initialState);
@@ -34,6 +44,9 @@ export default function AddFormInput({ name, placeholder }: IAddFormInput) {
 
   return (
     <AddFormFieldWrapper>
+      {callBack && (
+        <DeleteButton callBackFunction={callBackFunction} idx={idx} />
+      )}
       <AddFormInputLabel htmlFor={name}>{name}</AddFormInputLabel>
       <AddFormInputWrapper $valid={!error} $isTouched={!touched}>
         <AddFormInputText

@@ -8,8 +8,6 @@ export const UploaderConstainer = styled.div`
 
 export const DragNDropArea = styled.div<{ $drag: boolean }>`
   border: 2px dashed var(--accent-color);
-  border-width: 2px;
-  border-style: dashed;
   ${(props) => {
     if (props.$drag) {
       return `
@@ -18,7 +16,7 @@ export const DragNDropArea = styled.div<{ $drag: boolean }>`
     }
     return `border-color: var(--accent-color);`;
   }}
-  border-radius: 16px 8px;
+  border-radius: 31px 4px;
   padding: 4px;
   display: flex;
   flex-direction: column;
@@ -40,15 +38,6 @@ export const ImageUploaderInput = styled.input.attrs({
   accept: "image/*,.png,.jpg,.gif,.web",
   multiple: true,
 })`
-  opacity: 0;
-  height: 0;
-  width: 0;
-  line-height: 0;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-`;
-export const ImageUploaderLabel = styled.label`
   opacity: 0;
   height: 0;
   width: 0;

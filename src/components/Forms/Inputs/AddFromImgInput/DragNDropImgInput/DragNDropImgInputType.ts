@@ -12,3 +12,10 @@ export type FileRuleType = {
     error: string;
   };
 };
+export interface IDragNDropImgInput {
+  name: string;
+  placeholder: string;
+  idx: string;
+  callBack: boolean;
+  callBackFunction: (idx: string) => void;
+}

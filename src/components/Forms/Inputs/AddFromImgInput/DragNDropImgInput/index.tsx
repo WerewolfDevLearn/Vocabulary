@@ -1,9 +1,12 @@
 import { useRef, useState } from "react";
 
 import FromError from "components/Forms/FromError";
+import DeleteButton from "components/UIControl/DeleteButton";
+
 import {
   AddFormFieldWrapper,
   AddFormInputWrapper,
+  AddFormInputLabel,
 } from "components/Forms/FormsBasicStyles.styled";
 
 import arrToFileList from "utilities/arrayOfFilesToFileList";
@@ -17,10 +20,13 @@ import {
   DragNDropArea,
   SelectButton,
   ImageUploaderInput,
-  ImageUploaderLabel,
 } from "./DragNDropImgInput.styled";
 
-import { FileObj, FileRuleType } from "./DragNDropImgInputType";
+import {
+  FileObj,
+  FileRuleType,
+  IDragNDropImgInput,
+} from "./DragNDropImgInputType";
 
 const rule: FileRuleType = {
   maxSize: {
@@ -31,9 +37,11 @@ const rule: FileRuleType = {
 
 export default function DragNDropImgInput({
   name = "ImageUploader",
-}: {
-  name?: string;
-}) {
+  placeholder,
+  idx,
+  callBack,
+  callBackFunction,
+}: IDragNDropImgInput) {
   const filePicker = useRef<HTMLInputElement>(null);
   const imagesInput = filePicker.current;
   const [drag, setDrag] = useState(false);
@@ -108,6 +116,10 @@ export default function DragNDropImgInput({
 
   return (
     <AddFormFieldWrapper>
+      {callBack && (
+        <DeleteButton callBackFunction={callBackFunction} idx={idx} />
+      )}
+      <AddFormInputLabel htmlFor="imageUploader">{name}</AddFormInputLabel>
       <AddFormInputWrapper $valid={!error} $isTouched={!touched}>
         <UploaderConstainer>
           <DragNDropArea
@@ -121,15 +133,13 @@ export default function DragNDropImgInput({
             <SelectButton onClick={onButtonClick}>
               Or click here to select them
             </SelectButton>
-            <ImageUploaderLabel htmlFor="imageUploader">
-              Image uploader
-            </ImageUploaderLabel>
             <ImageUploaderInput
               data-valid={!error}
               ref={filePicker}
               onChange={handleInputChange}
               id="imageUploader"
-              name={`${name}`}
+              name={name}
+              placeholder={name}
             />
           </DragNDropArea>
           <ImageUploaderPreview

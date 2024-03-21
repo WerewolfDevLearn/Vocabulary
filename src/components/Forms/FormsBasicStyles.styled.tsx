@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const AddFormFieldWrapper = styled.div``;
+export const AddFormFieldWrapper = styled.div`
+  position: relative;
+`;
 
 export const AddFormInputLabel = styled.label`
   font-size: var(--font-size-small);
@@ -20,10 +22,10 @@ export const AddFormInputWrapper = styled.div<{
   }};
   border-width: 2px;
   border-style: solid;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 10px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 35px;
   padding-inline: 20px;
   padding-block: 4px;
   background-color: var(--transperent-green-color);

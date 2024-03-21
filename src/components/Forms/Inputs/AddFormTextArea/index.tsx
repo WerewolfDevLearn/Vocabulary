@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 import FromError from "components/Forms/FromError";
+import DeleteButton from "components/UIControl/DeleteButton";
+
 import { inputValidation } from "utilities/inputValidation";
 
 import { IAddFormTextArea } from "./AddFormTextAreaTypes";
@@ -16,6 +18,9 @@ import {
 export default function AddFormTextArea({
   name,
   placeholder,
+  idx,
+  callBack,
+  callBackFunction,
 }: IAddFormTextArea) {
   const initialState = "";
   const [error, setError] = useState<string>("");
@@ -38,8 +43,12 @@ export default function AddFormTextArea({
       setError(error);
     }
   };
+
   return (
     <AddFormFieldWrapper>
+      {callBack && (
+        <DeleteButton callBackFunction={callBackFunction} idx={idx} />
+      )}
       <AddFormInputLabel htmlFor={name}>{name}</AddFormInputLabel>
       <AddFormInputWrapper $valid={!error} $isTouched={!touched}>
         <AddFormTextAreaElem

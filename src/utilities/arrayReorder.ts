@@ -1,10 +1,8 @@
-import { FileObj } from "components/Forms/AddFromImgInput/DragNDropImgInput/DragNDropImgInputType";
-
 export default function arrayReaorder(
   idxOfElem: number,
   idxOfInsert: number,
-  array: FileObj[],
-): FileObj[] {
+  array: any[],
+) {
   const newArray = [...array];
   newArray.splice(idxOfElem, 1);
   const newPoitionOfInsertion = newArray.indexOf(array[idxOfInsert]);

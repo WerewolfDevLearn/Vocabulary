@@ -7,5 +7,4 @@ export const RecentStyles = styled.div`
   border-radius: 8px 16px;
   padding: 4px;
   background-color: var(--main-alt-bg-color);
-  margin-bottom: 25px;
 `;
